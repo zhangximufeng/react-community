@@ -12,13 +12,14 @@
     "build": "npm run clear && npm run build:client && npm run build:server",
     "start": "cross-env NODE_ENV=production node server/server.js",
     "eslint": "eslint $(git diff-index --cached HEAD --name-only --diff-filter '.js$')",
-    "precommit.silent": "true",
-    "lint": "eslint .",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore",
     "fix": "eslint --fix ."
   },
   "author": "zhangximufeng",
   "license": "ISC",
   "pre-commit": [
+    "precommit-msg",
     "fix",
     "lint"
   ],
