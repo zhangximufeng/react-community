@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "html",
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "semi": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-console": "warn",
+    "jsx-a11y/anchor-is-valid": [0],
+    "react/require-default-props": [0]
+  }
+}
